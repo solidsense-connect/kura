@@ -715,16 +715,25 @@ public class EntryClassUi extends Composite implements Context, ServicesUi.Liste
     }
 
     public void fetchAvailableServices() {
+    	fetchAvailableServices(false);
+    }
+    
+    public void fetchAvailableServices(final boolean forceRendering) {
         if (!this.userData.checkPermission(KuraPermission.ADMIN)) {
             return;
         }
 
         RequestQueue.submit(c -> this.gwtXSRFService.generateSecurityToken(c.callback(token -> this.gwtComponentService
                 .findComponentConfigurations(token, SERVICES_FILTER, c.callback(result -> {
+                	final String selectedName = (selected != null) ? selected.getComponentName() : "";
+                    GwtConfigComponent targetComponent = null;
                     sortConfigurationsByName(result);
                     EntryClassUi.this.servicesMenu.clear();
                     for (GwtConfigComponent configComponent : result) {
                         if (!configComponent.isWireComponent()) {
+                        	if (selectedName.equals(configComponent.getComponentName())) {
+                                targetComponent = configComponent;
+                            }
                             final ServicesAnchorListItem item = new ServicesAnchorListItem(configComponent);
                             item.addClickHandler(e -> confirmIfUiDirty(() -> {
                                 setSelected(configComponent);
@@ -734,6 +743,10 @@ public class EntryClassUi extends Composite implements Context, ServicesUi.Liste
                             EntryClassUi.this.servicesMenu.add(item);
                         }
                     }
+                    if (forceRendering && (targetComponent != null)) {
+                        render(targetComponent);
+                    }
+                    
                     filterAvailableServices(EntryClassUi.this.textSearch.getValue());
                 })))));
 
