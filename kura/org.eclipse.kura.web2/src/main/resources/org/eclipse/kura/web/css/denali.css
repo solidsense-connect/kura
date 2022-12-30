@@ -513,16 +513,16 @@ Sidenav START
 .sidenav .nav a {
 	border-radius: 0;
 	border-left: solid 0.1cm rgb(245, 245, 245);
-	color: #818186;
+	color: #515156;
 }
 
 .sidenav .nav a:hover, .sidenav .nav a:active {
-	border-left: solid 0.1cm #2860A6;
+	border-left: solid 0.1cm #DA291C;
 	background-color: white;
 }
 
 .sidenav .nav li.selected-item a {
-	border-left: solid 0.15cm #2860A6;
+	border-left: solid 0.15cm #DA291C;
 	background-color: white;
 }
 
@@ -595,7 +595,7 @@ Navbar START
 @media screen and (min-width: 768px) {
 
 .content-panel .navbar-nav li.active {
-	border-bottom: solid 0.1cm #2860A6;
+	border-bottom: solid 0.1cm #515156;
 }
 
 }
@@ -603,7 +603,7 @@ Navbar START
 @media screen and (max-width: 768px) {
 	
 .content-panel .navbar-nav  li.active a {
-	border-left: solid 0.1cm #2860A6;
+	border-left: solid 0.1cm #515156;
 }
 
 }
@@ -627,7 +627,7 @@ Navbar START
 }
 
 .nav-tabs li.active {
-	border-bottom: solid 0.1cm #2860A6;
+	border-bottom: solid 0.1cm #515156;
 }
 
 /**********************
