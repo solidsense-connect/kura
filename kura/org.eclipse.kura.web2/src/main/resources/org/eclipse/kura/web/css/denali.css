@@ -221,7 +221,7 @@ table {
 }
 
 .rowHeader {
-    background-color: rgb(40, 96, 166) !important;
+    background-color: rgb(81, 81, 86) !important;
     font-size: 14px !important;
     color: white !important;
     pointer-events: none !important;
@@ -513,7 +513,7 @@ Sidenav START
 .sidenav .nav a {
 	border-radius: 0;
 	border-left: solid 0.1cm rgb(245, 245, 245);
-	color: #2860A6;
+	color: #818186;
 }
 
 .sidenav .nav a:hover, .sidenav .nav a:active {
@@ -1086,7 +1086,7 @@ Packages panel dropzone END
 }
 
 .btn:not(.sidebar-button) {
-	background-color: rgb(40, 96, 166) !important;
+	background-color: rgb(218, 41, 28) !important;
 	color: white !important;
 }
 
@@ -1139,7 +1139,7 @@ div.headerLogo {
 	height: 			38px;
 	margin: 			5px 0px 5px 15px;
 	vertical-align: 	baseline;
-	background: 		url(eclipse/kura/icons/kura_logo_small.png);
+	background: 		url(eclipse/kura/icons/solidsense_connect_logo.png);
 	background-repeat: 	no-repeat;
 	background-size: 	contain;
 	background-position: center !important;
