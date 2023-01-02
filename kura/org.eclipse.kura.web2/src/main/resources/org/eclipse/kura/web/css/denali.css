@@ -576,7 +576,7 @@ Login START
 
 @media screen and (max-width: 992px) {
 	.login-background {
-    	background-size: 30%,30%,cover;
+    	background-size: 24%,cover;
 	}
 
 	.login-form {
@@ -1139,7 +1139,7 @@ div.headerLogo {
 	height: 			38px;
 	margin: 			5px 0px 5px 15px;
 	vertical-align: 	baseline;
-	background: 		url(eclipse/kura/icons/solidsense_connect_logo.png);
+	background: 		url(eclipse/kura/icons/solidsense_connect_logo_inline.png);
 	background-repeat: 	no-repeat;
 	background-size: 	contain;
 	background-position: center !important;
