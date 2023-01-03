@@ -1011,7 +1011,7 @@
 
     <profiles>
         <profile>
-            <id>n8-compact</id>
+            <id>solidsense-igw</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -1042,7 +1042,7 @@
                         <version>1.7</version>
                         <executions>
                             <execution>
-                                <id>n8-compact-jars</id>
+                                <id>solidsense-igw-jars</id>
                                 <phase>prepare-package</phase>
                                 <goals>
                                     <goal>run</goal>
@@ -1053,11 +1053,11 @@
                                         <property name="project.version" value="${project.version}" />
                                         <property name="project.build.profile" value="${project.build.profile}" />
                                         <property name="project.build.directory" value="${project.build.directory}" />
-                                        <property name="build.name" value="n8-compact" />
-                                        <property name="target.device" value="n8-compact" />
+                                        <property name="build.name" value="solidsense-igw" />
+                                        <property name="target.device" value="solidsense-igw" />
                                         <property name="native.tag" value="aarch64" />
                                         <property name="kura.os.version" value="debian" />
-                                        <property name="kura.arch" value="n8-compact" />
+                                        <property name="kura.arch" value="solidsense-igw" />
                                         <property name="service.manager" value="systemd" />
                                         <property name="os.base" value="debian" />
                                         <property name="kura.mem.size" value="256m" />
@@ -1074,18 +1074,18 @@
                         <version>1.0</version>
                         <executions>
                             <execution>
-                                <id>n8-compact-deb</id>
+                                <id>solidsense-igw-deb</id>
                                 <phase>package</phase>
                                 <goals>
                                     <goal>jdeb</goal>
                                 </goals>
                                 <configuration>
                                     <verbose>true</verbose>
-                                    <deb>${basedir}/target/kura_${project.version}_n8-compact_installer.deb</deb>
-                                    <controlDir>${basedir}/src/main/resources/n8-compact/deb/control</controlDir>
+                                    <deb>${basedir}/target/kura_${project.version}_solidsense-igw_installer.deb</deb>
+                                    <controlDir>${basedir}/src/main/resources/solidsense-igw/deb/control</controlDir>
                                     <dataSet>
                                         <data>
-                                            <src>${basedir}/target/kura_${project.version}_n8-compact.zip</src>
+                                            <src>${basedir}/target/kura_${project.version}_solidsense-igw.zip</src>
                                             <type>file</type>
                                             <mapper>
                                                 <type>perm</type>
